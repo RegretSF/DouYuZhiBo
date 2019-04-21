@@ -12,8 +12,6 @@
 		0F8BE0E9226C2555001CE3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8BE0E7226C2555001CE3A3 /* Main.storyboard */; };
 		0F8BE0EB226C2557001CE3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8BE0EA226C2557001CE3A3 /* Assets.xcassets */; };
 		0F8BE0EE226C2557001CE3A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8BE0EC226C2557001CE3A3 /* LaunchScreen.storyboard */; };
-		0F8BE0F9226C2557001CE3A3 /* DouYuZhiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BE0F8226C2557001CE3A3 /* DouYuZhiBoTests.swift */; };
-		0F8BE104226C2557001CE3A3 /* DouYuZhiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BE103226C2557001CE3A3 /* DouYuZhiBoUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +40,7 @@
 		0F8BE0ED226C2557001CE3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F8BE0EF226C2557001CE3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F8BE0F4226C2557001CE3A3 /* DouYuZhiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouYuZhiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F8BE0F8226C2557001CE3A3 /* DouYuZhiBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYuZhiBoTests.swift; sourceTree = "<group>"; };
-		0F8BE0FA226C2557001CE3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F8BE0FF226C2557001CE3A3 /* DouYuZhiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouYuZhiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F8BE103226C2557001CE3A3 /* DouYuZhiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYuZhiBoUITests.swift; sourceTree = "<group>"; };
-		0F8BE105226C2557001CE3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				0F8BE0E2226C2555001CE3A3 /* DouYuZhiBo */,
-				0F8BE0F7226C2557001CE3A3 /* DouYuZhiBoTests */,
-				0F8BE102226C2557001CE3A3 /* DouYuZhiBoUITests */,
 				0F8BE0E1226C2555001CE3A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,24 +97,6 @@
 				0F8BE0EF226C2557001CE3A3 /* Info.plist */,
 			);
 			path = DouYuZhiBo;
-			sourceTree = "<group>";
-		};
-		0F8BE0F7226C2557001CE3A3 /* DouYuZhiBoTests */ = {
-			isa = PBXGroup;
-			children = (
-				0F8BE0F8226C2557001CE3A3 /* DouYuZhiBoTests.swift */,
-				0F8BE0FA226C2557001CE3A3 /* Info.plist */,
-			);
-			path = DouYuZhiBoTests;
-			sourceTree = "<group>";
-		};
-		0F8BE102226C2557001CE3A3 /* DouYuZhiBoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0F8BE103226C2557001CE3A3 /* DouYuZhiBoUITests.swift */,
-				0F8BE105226C2557001CE3A3 /* Info.plist */,
-			);
-			path = DouYuZhiBoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8BE0F9226C2557001CE3A3 /* DouYuZhiBoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8BE104226C2557001CE3A3 /* DouYuZhiBoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,9 +404,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FP3TC6D5S9;
 				INFOPLIST_FILE = DouYuZhiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tianqikeji.www.DouYuZhiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,9 +424,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FP3TC6D5S9;
 				INFOPLIST_FILE = DouYuZhiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tianqikeji.www.DouYuZhiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
