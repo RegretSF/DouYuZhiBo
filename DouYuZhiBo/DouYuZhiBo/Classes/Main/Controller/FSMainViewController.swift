@@ -14,6 +14,7 @@ class FSMainViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //#f3863c
         
         addCildVC(storyName: "Home")    //首页
         addCildVC(storyName: "Live")    //直播

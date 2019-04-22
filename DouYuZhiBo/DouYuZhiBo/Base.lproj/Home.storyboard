@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="4ut-M2-kLf">
             <objects>
-                <viewController id="1CU-30-9Cu" sceneMemberID="viewController">
+                <viewController id="1CU-30-9Cu" customClass="FSHomeVC" customModule="DouYuZhiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QWT-Xo-Svt"/>
                         <viewControllerLayoutGuide type="bottom" id="uof-Ue-jKg"/>
