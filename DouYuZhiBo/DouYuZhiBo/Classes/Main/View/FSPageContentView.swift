@@ -20,6 +20,7 @@ class FSPageContentView: UIView {
     private var childVCs : [UIViewController]
     private weak var parentViewController : UIViewController?
     private var startOffsetX : CGFloat = 0
+    private var isForbidScrollDelegate : Bool = false
     weak var delegate : PageContentViewDelegate?  //声明代理
     
     // MARK:- 懒加载属性
@@ -105,11 +106,17 @@ extension FSPageContentView : UICollectionViewDataSource,UICollectionViewDelegat
     
     //开始滑动时
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScrollDelegate = false
+        
         startOffsetX = scrollView.contentOffset.x
     }
     
     //监听滚动的变化
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //0.判断是否是点击事件
+        if isForbidScrollDelegate { return }
+        
         //1.获取需要的数据
         var progress : CGFloat = 0
         var sourceIndex : Int = 0
@@ -130,6 +137,7 @@ extension FSPageContentView : UICollectionViewDataSource,UICollectionViewDelegat
             targetIndex = sourceIndex + 1
             if targetIndex >= childVCs.count {
                 targetIndex = childVCs.count - 1
+                progress = 1
             }
             
             //4.如果完全滑过去
@@ -137,11 +145,13 @@ extension FSPageContentView : UICollectionViewDataSource,UICollectionViewDelegat
                 progress = 1
                 targetIndex = sourceIndex
             }
+            print("ration:\(ratio) floor(ratio):\(floor(ratio))")
+            print("progress:\(progress)")
             
         }else { //右滑
             //1.计算progress
             let ratio = currentOffsetX / scrollViewW
-            progress = 1 - ratio - floor(ratio)
+            progress = 1 - (ratio - floor(ratio))
             
             //2.计算targetIndex
             targetIndex = Int(ratio)
@@ -156,7 +166,6 @@ extension FSPageContentView : UICollectionViewDataSource,UICollectionViewDelegat
         
         //3.将progress/targetIndex/sourceIndex传递给titleView
         delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
-       // print("progress:\(progress) sourceIndex:\(sourceIndex) targetIndex:\(targetIndex)")
     }
     
     
@@ -165,6 +174,10 @@ extension FSPageContentView : UICollectionViewDataSource,UICollectionViewDelegat
 // MARK:- 对外暴露的方法
 extension FSPageContentView {
     func setCurrentIndex(currentIndex : Int) {
+        //1.记录需要禁止执行的代理方法
+        isForbidScrollDelegate = true
+        
+        //2.滑动到正确的位置
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
     }
