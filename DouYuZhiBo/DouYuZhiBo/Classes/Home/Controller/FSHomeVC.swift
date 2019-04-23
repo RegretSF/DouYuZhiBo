@@ -5,7 +5,7 @@
 //  Created by Fat brother on 2019/4/22.
 //  Copyright © 2019 Fat brother. All rights reserved.
 //
-
+//首页
 import UIKit
 
 private let kTitltViewH : CGFloat = 40;
@@ -14,6 +14,7 @@ class FSHomeVC: UIViewController {
     
     // MARK:- 定义属性
     private var kNavigationBarH = CGFloat() //导航栏的高度
+    private var kTabBarH = CGFloat()    //获取标签栏的高度
     
     // MARK:- 懒加载属性
     //标题视图
@@ -32,12 +33,13 @@ class FSHomeVC: UIViewController {
     //内容视图
     private lazy var pageContentView : FSPageContentView = { [weak self] in
         //1.设置contentFrame
-        let contentH = kScreenH - (kStatusBarH + kNavigationBarH + kTitltViewH)
+        let contentH = kScreenH - (kStatusBarH + kNavigationBarH + kTitltViewH + kTabBarH)
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitltViewH, width: kScreenW, height: contentH)
         
         //2.确定所有的子控制器
         var childVCs = [UIViewController]()
-        for _ in 0..<4 {
+        childVCs.append(FSRecommendVC())
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
@@ -57,6 +59,10 @@ class FSHomeVC: UIViewController {
         //1.获取导航栏的高度
         let kNavigationBarH = self.navigationController?.navigationBar.frame.size.height
         self.kNavigationBarH = kNavigationBarH!
+        
+        //2.获取标签栏的高度
+        let kTabBarH = self.tabBarController?.tabBar.frame.size.height
+        self.kTabBarH = kTabBarH!
         
         //设置UI界面
         setupUI()
