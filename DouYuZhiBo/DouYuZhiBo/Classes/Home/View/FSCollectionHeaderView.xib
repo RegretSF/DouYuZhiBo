@@ -36,12 +36,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoY-JR-LFO">
-                    <rect key="frame" x="250" y="13" width="60" height="32"/>
+                    <rect key="frame" x="260" y="13" width="60" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="KaE-51-yTG"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="更多 &gt;">
+                    <state key="normal" title="更多 &gt;&gt;">
                         <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </state>
                 </button>
@@ -54,7 +54,7 @@
                 <constraint firstAttribute="bottom" secondItem="eoY-JR-LFO" secondAttribute="bottom" constant="5" id="VAR-Qx-GOm"/>
                 <constraint firstItem="sUr-Fp-BMl" firstAttribute="centerY" secondItem="NWs-g9-9Vu" secondAttribute="centerY" id="Z83-9O-lrc"/>
                 <constraint firstItem="sUr-Fp-BMl" firstAttribute="leading" secondItem="NWs-g9-9Vu" secondAttribute="trailing" constant="5" id="dIg-Gm-AoG"/>
-                <constraint firstAttribute="trailing" secondItem="eoY-JR-LFO" secondAttribute="trailing" constant="10" id="gTF-Qy-JYP"/>
+                <constraint firstAttribute="trailing" secondItem="eoY-JR-LFO" secondAttribute="trailing" id="gTF-Qy-JYP"/>
                 <constraint firstItem="rRi-sV-dAV" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="qb6-fH-tHT"/>
                 <constraint firstItem="rRi-sV-dAV" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="xSf-3C-oO1"/>
             </constraints>

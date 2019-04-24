@@ -19,6 +19,10 @@
 		0F8BE0E4226C2555001CE3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BE0E3226C2555001CE3A3 /* AppDelegate.swift */; };
 		0F8BE0EB226C2557001CE3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8BE0EA226C2557001CE3A3 /* Assets.xcassets */; };
 		0F8BE0EE226C2557001CE3A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8BE0EC226C2557001CE3A3 /* LaunchScreen.storyboard */; };
+		0FAE920922702523007FCC40 /* FSCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE920722702523007FCC40 /* FSCollectionNormalCell.swift */; };
+		0FAE920A22702523007FCC40 /* FSCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE920822702523007FCC40 /* FSCollectionNormalCell.xib */; };
+		0FAE921022707935007FCC40 /* FSCollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE920E22707935007FCC40 /* FSCollectionPrettyCell.swift */; };
+		0FAE921122707935007FCC40 /* FSCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE920F22707935007FCC40 /* FSCollectionPrettyCell.xib */; };
 		0FCC3F92226F1F2E00050CF6 /* FSRecommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC3F91226F1F2E00050CF6 /* FSRecommendVC.swift */; };
 		0FCC3F95226F3EF500050CF6 /* FSCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC3F93226F3EF500050CF6 /* FSCollectionHeaderView.swift */; };
 		0FCC3F96226F3EF500050CF6 /* FSCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC3F94226F3EF500050CF6 /* FSCollectionHeaderView.xib */; };
@@ -61,6 +65,10 @@
 		0F8BE0EF226C2557001CE3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F8BE0F4226C2557001CE3A3 /* DouYuZhiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouYuZhiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8BE0FF226C2557001CE3A3 /* DouYuZhiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouYuZhiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FAE920722702523007FCC40 /* FSCollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCollectionNormalCell.swift; sourceTree = "<group>"; };
+		0FAE920822702523007FCC40 /* FSCollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSCollectionNormalCell.xib; sourceTree = "<group>"; };
+		0FAE920E22707935007FCC40 /* FSCollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCollectionPrettyCell.swift; sourceTree = "<group>"; };
+		0FAE920F22707935007FCC40 /* FSCollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSCollectionPrettyCell.xib; sourceTree = "<group>"; };
 		0FCC3F91226F1F2E00050CF6 /* FSRecommendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSRecommendVC.swift; sourceTree = "<group>"; };
 		0FCC3F93226F3EF500050CF6 /* FSCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCollectionHeaderView.swift; sourceTree = "<group>"; };
 		0FCC3F94226F3EF500050CF6 /* FSCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 			children = (
 				0F812029226D85D600324330 /* FSPageTitleView.swift */,
 				0F81202D226DA77700324330 /* FSPageContentView.swift */,
+				0FAE920722702523007FCC40 /* FSCollectionNormalCell.swift */,
+				0FAE920822702523007FCC40 /* FSCollectionNormalCell.xib */,
+				0FAE920E22707935007FCC40 /* FSCollectionPrettyCell.swift */,
+				0FAE920F22707935007FCC40 /* FSCollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,9 +370,11 @@
 				0F812014226D624900324330 /* Main.storyboard in Resources */,
 				0F8BE0EE226C2557001CE3A3 /* LaunchScreen.storyboard in Resources */,
 				0F8BE0EB226C2557001CE3A3 /* Assets.xcassets in Resources */,
+				0FAE921122707935007FCC40 /* FSCollectionPrettyCell.xib in Resources */,
 				0FCC3F96226F3EF500050CF6 /* FSCollectionHeaderView.xib in Resources */,
 				0FE7B6A2226C9ACF00662872 /* Live.storyboard in Resources */,
 				0FE7B6A8226C9B1400662872 /* Profile.storyboard in Resources */,
+				0FAE920A22702523007FCC40 /* FSCollectionNormalCell.xib in Resources */,
 				0FE7B6A5226C9AF200662872 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,12 +400,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FAE921022707935007FCC40 /* FSCollectionPrettyCell.swift in Sources */,
 				0FCC3F92226F1F2E00050CF6 /* FSRecommendVC.swift in Sources */,
 				0F812011226D621E00324330 /* FSMainViewController.swift in Sources */,
 				0F812030226DADF500324330 /* UIColor-Extension.swift in Sources */,
 				0F8BE0E4226C2555001CE3A3 /* AppDelegate.swift in Sources */,
 				0FCC3F95226F3EF500050CF6 /* FSCollectionHeaderView.swift in Sources */,
 				0F812028226D83D600324330 /* UIBarButtonItem-Extension.swift in Sources */,
+				0FAE920922702523007FCC40 /* FSCollectionNormalCell.swift in Sources */,
 				0F81201D226D69A900324330 /* FSHomeVC.swift in Sources */,
 				0F81202C226D8AF600324330 /* Common.swift in Sources */,
 				0F81202A226D85D600324330 /* FSPageTitleView.swift in Sources */,
@@ -602,7 +618,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FP3TC6D5S9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DouYuZhiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,7 +638,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FP3TC6D5S9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DouYuZhiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
